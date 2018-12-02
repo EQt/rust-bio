@@ -3,9 +3,13 @@
 // This file may not be copied, modified, or distributed
 // except according to those terms.
 
-//! FASTA format reading and writing.
+//! # FASTA format reading and writing.
 //!
-//! # Example
+//! There are two notions on how to access a FASTA file:
+//! - As a stream in the [`Reader`](struct.Reader.html) providing [`Records`](struct.Records.html), an `Iterator` implementation.
+//! - By an [`IndexedReader`](struct.IndexedReader.html), in case you have a SAMTools index (`.fai`).
+//!
+//! ## Example
 //!
 //! ```
 //! use std::io;
